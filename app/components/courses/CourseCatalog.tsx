@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { DotPattern } from "../DecorativeElements";
 
 export default function CourseCatalog() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -15,8 +16,7 @@ export default function CourseCatalog() {
       level: "Beginner",
       badge: "Beginner",
       badgeColor: "bg-teal-700",
-      emoji: "👋",
-      bgColor: "from-orange-200 to-pink-200",
+      image: "/c1.png",
     },
     {
       id: 2,
@@ -28,8 +28,7 @@ export default function CourseCatalog() {
       level: "Cultural",
       badge: "Cultural",
       badgeColor: "bg-yellow-500",
-      emoji: "✊",
-      bgColor: "teal-700",
+      image: "/c2.png",
     },
     {
       id: 3,
@@ -41,14 +40,17 @@ export default function CourseCatalog() {
       level: "Professional",
       badge: "Professional",
       badgeColor: "bg-purple-600",
-      emoji: "💼",
-      bgColor: "from-teal-600 to-teal-800",
+      image: "/c3.png",
     },
   ];
 
   return (
-    <section id="courses" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="courses" className="py-20 bg-white relative overflow-hidden">
+      {/* Decorative Elements */}
+      <DotPattern className="top-20 left-10 text-teal-400 opacity-25" />
+      <DotPattern className="bottom-20 right-10 text-cyan-400 opacity-25" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Course Catalog
@@ -110,14 +112,12 @@ export default function CourseCatalog() {
               className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200"
             >
               <div className="relative">
-                <div
-                  className={`aspect-video ${
-                    course.bgColor.includes("from")
-                      ? `bg-gradient-to-br ${course.bgColor}`
-                      : `bg-${course.bgColor}`
-                  } flex items-center justify-center`}
-                >
-                  <span className="text-6xl">{course.emoji}</span>
+                <div className="aspect-video bg-gray-100 overflow-hidden">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <span
                   className={`absolute top-4 left-4 ${course.badgeColor} text-white px-3 py-1 rounded-full text-xs font-semibold`}

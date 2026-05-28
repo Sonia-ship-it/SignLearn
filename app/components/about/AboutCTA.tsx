@@ -1,28 +1,32 @@
 import Link from "next/link";
+import { DotPattern } from "../DecorativeElements";
 
 export default function AboutCTA() {
   return (
-    <section className="py-20 bg-teal-700">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl font-bold text-white mb-6">
+    <section className="py-20 bg-teal-800 relative overflow-hidden">
+      {/* Decorative Elements */}
+      <DotPattern className="top-10 right-10 text-teal-600 opacity-20" />
+      <DotPattern className="bottom-10 left-10 text-teal-600 opacity-20" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           Be Part of the Future.
         </h2>
-        <p className="text-xl text-cyan-100 mb-8">
-          Whether you want to learn, or volunteer, or donate, your contribution
-          helps us bridge the gap between silence.
+        <p className="text-xl text-teal-100 mb-10 max-w-3xl mx-auto">
+          Whether you are a learner, an educator, or a donor, your contribution helps us bridge the gap between worlds.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link
-            href="/get-started"
-            className="bg-white text-teal-700 px-8 py-3 rounded-full hover:bg-gray-100 transition font-semibold"
+            href="/courses"
+            className="bg-white text-teal-800 px-10 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:scale-105"
           >
-            Join Now
+            Enroll Now
           </Link>
           <Link
             href="/donate"
-            className="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white/10 transition font-semibold"
+            className="border-2 border-white text-white px-10 py-4 rounded-full hover:bg-white/10 transition-all duration-300 font-semibold hover:shadow-lg"
           >
-            Support Our Mission
+            Support Our Impact
           </Link>
         </div>
       </div>

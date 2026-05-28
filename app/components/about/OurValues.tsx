@@ -1,20 +1,25 @@
+import { DotPattern } from "../DecorativeElements";
+
 export default function OurValues() {
   return (
-    <section id="values" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="values" className="py-20 bg-gray-50 relative overflow-hidden">
+      {/* Decorative Elements */}
+      <DotPattern className="top-10 right-20 text-teal-400 opacity-30" />
+      <DotPattern className="bottom-10 left-20 text-cyan-400 opacity-30" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             The Values That Guide Us
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Our values are the heartbeat of SignLearn, guiding every feature and
-            fostering an environment of equality and inclusion.
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Our principles are the heartbeat of SignLearn, ensuring every feature we build serves our community first.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-2xl p-8 text-center">
-            <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-3xl p-10 text-center min-h-[400px] flex flex-col items-center justify-start shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6">
               <svg
                 className="w-8 h-8 text-teal-700"
                 fill="none"
@@ -29,17 +34,16 @@ export default function OurValues() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
               Accessibility
             </h3>
-            <p className="text-gray-600">
-              Education is a human right. We design our platform to be inclusive
-              and accessible to all, regardless of ability or background.
+            <p className="text-gray-600 leading-relaxed">
+              Education is a human right. We design everything with "Deaf-first" principles, ensuring zero barriers to entry.
             </p>
           </div>
 
-          <div className="bg-teal-700 rounded-2xl p-8 text-center transform scale-105">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="bg-teal-700 rounded-3xl p-10 text-center min-h-[400px] flex flex-col items-center justify-start shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
               <svg
                 className="w-8 h-8 text-white"
                 fill="none"
@@ -54,17 +58,16 @@ export default function OurValues() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">Community</h3>
-            <p className="text-white">
-              When we lift together, we rise. We build a supportive space where
-              Deaf learners and educators can connect and grow.
+            <h3 className="text-xl font-bold text-white mb-4">Community</h3>
+            <p className="text-teal-50 leading-relaxed">
+              We aren't just a platform; we are a family. Our roadmaps are shaped by feedback from the Deaf community.
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="bg-white rounded-3xl p-10 text-center min-h-[400px] flex flex-col items-center justify-start shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6">
               <svg
-                className="w-8 h-8 text-purple-700"
+                className="w-8 h-8 text-teal-700"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -77,10 +80,9 @@ export default function OurValues() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
-            <p className="text-gray-600">
-              Leveraging cutting-edge AI and design to create engaging, effective
-              learning experiences for the Deaf community.
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Innovation</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Harnessing cutting-edge AI and motion capture to make learning signs as natural as speaking.
             </p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Link from "next/link";
-import { WavePattern, DotPattern, CirclePattern } from "./components/DecorativeElements";
+import { DotPattern } from "./components/DecorativeElements";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-cyan-50 to-white py-20 relative overflow-hidden">
           {/* Decorative Elements */}
-          <WavePattern className="top-10 left-10 text-teal-400 opacity-60" />
+          <DotPattern className="top-10 left-10 text-teal-400 opacity-50" />
           <DotPattern className="bottom-20 right-20 text-teal-500 opacity-50" />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -23,21 +23,21 @@ export default function Home() {
                 <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                   Unlock the World of Visual Language
                 </h1>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                   Discover a new world of communication with professional courses
                   designed for the Deaf community. From basic ASL to advanced
                   level fluency.
                 </p>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                   <Link
                     href="/courses"
-                    className="bg-teal-700 text-white px-8 py-3 rounded-full hover:bg-teal-800 transition font-semibold"
+                    className="bg-teal-700 text-white px-8 py-3.5 rounded-full hover:bg-teal-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:scale-105"
                   >
                     Start Learning Now
                   </Link>
                   <Link
                     href="#intro"
-                    className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-teal-700 hover:text-teal-700 transition font-semibold"
+                    className="border-2 border-gray-300 text-gray-700 px-8 py-3.5 rounded-full hover:border-teal-700 hover:text-teal-700 transition-all duration-300 font-semibold hover:shadow-md"
                   >
                     Watch Intro
                   </Link>
@@ -109,27 +109,27 @@ export default function Home() {
         {/* Communication is a Human Right */}
         <section className="py-20 bg-white relative overflow-hidden">
           {/* Decorative Elements */}
-          <CirclePattern className="top-10 right-10 text-cyan-200 opacity-20" />
-          <WavePattern className="bottom-10 left-10 text-teal-200 opacity-30 transform rotate-180" />
+          <DotPattern className="top-10 right-10 text-teal-400 opacity-30" />
+          <DotPattern className="bottom-10 left-10 text-cyan-400 opacity-30" />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Communication is a Human Right
               </h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                ASL is not just a language—it's a vibrant culture and a powerful
-                tool for connection. Join us in breaking down barriers and
-                building bridges through accessible education for the Deaf
-                community.
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                At SignLearn, we believe language should never be a barrier to
+                connection. Our mission is to bridge the gap between the hearing
+                and the Deaf community by providing accessible, high-quality ASL
+                education for everyone, everywhere.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <div className="bg-white rounded-3xl p-8 shadow-lg text-center flex flex-col items-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="mb-6">
                   <svg
-                    className="w-10 h-10 text-teal-700"
+                    className="w-12 h-12 text-teal-700 mx-auto"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -142,19 +142,20 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Inclusive Range
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Inclusive Design
                 </h3>
-                <p className="text-gray-600">
-                  Courses designed for all skill levels, from absolute beginners
-                  to advanced signers.
+                <p className="text-gray-600 leading-relaxed">
+                  Built from the ground up with the Deaf community for authentic
+                  learning. Every course is designed with input from Deaf educators
+                  to ensure genuine representation and effective teaching methods.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-20 h-20 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-white rounded-3xl p-8 shadow-lg text-center flex flex-col items-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="mb-6">
                   <svg
-                    className="w-10 h-10 text-cyan-700"
+                    className="w-12 h-12 text-teal-700 mx-auto"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -163,23 +164,24 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Expert-Led
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Expert Led
                 </h3>
-                <p className="text-gray-600">
-                  Learn from native signers and certified ASL instructors with
-                  years of experience.
+                <p className="text-gray-600 leading-relaxed">
+                  Learn from certified CODA and Deaf instructors with decades of
+                  experience. Our teaching team brings real-world experience and
+                  cultural knowledge to every lesson.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-white rounded-3xl p-8 shadow-lg text-center flex flex-col items-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="mb-6">
                   <svg
-                    className="w-10 h-10 text-blue-700"
+                    className="w-12 h-12 text-teal-700 mx-auto"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -188,16 +190,17 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Flexible Access
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Global Access
                 </h3>
-                <p className="text-gray-600">
-                  Learn at your own pace with 24/7 access to video lessons and
-                  practice materials.
+                <p className="text-gray-600 leading-relaxed">
+                  Affordable and free tiers to ensure no one is left behind in
+                  communication. We offer scholarships and free foundational courses
+                  so financial barriers never prevent learning.
                 </p>
               </div>
             </div>
@@ -205,56 +208,38 @@ export default function Home() {
         </section>
 
         {/* Popular Courses */}
-        <section className="py-20 bg-white relative overflow-hidden">
+        <section className="py-20 bg-gray-50 relative overflow-hidden">
           {/* Decorative Elements */}
-          <DotPattern className="top-20 left-10 text-teal-300 opacity-25" />
-          <DotPattern className="bottom-20 right-10 text-cyan-300 opacity-25" />
+          <DotPattern className="top-20 left-10 text-teal-400 opacity-30" />
+          <DotPattern className="bottom-20 right-10 text-cyan-400 opacity-30" />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="flex justify-between items-end mb-12">
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-2">
-                  Popular Courses
-                </h2>
-                <p className="text-gray-600">
-                  Start your ASL journey with our most loved courses
-                </p>
-              </div>
-              <Link
-                href="/courses"
-                className="text-teal-700 font-semibold hover:text-teal-800 flex items-center gap-2"
-              >
-                View all courses
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Link>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Popular Courses
+              </h2>
+              <p className="text-lg text-gray-600">
+                Start your ASL journey with our most loved courses
+              </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
-              {/* ASL 101 */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition">
-                <div className="aspect-video bg-gradient-to-br from-orange-200 to-pink-200 flex items-center justify-center">
-                  <span className="text-6xl">👋</span>
+              {/* ASL Basics */}
+              <div className="bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 shadow-md hover:-translate-y-1">
+                <div className="aspect-video bg-gray-100 overflow-hidden">
+                  <img
+                    src="/sign.jpg"
+                    alt="ASL Basics"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6">
-                  <span className="inline-block bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                  <span className="inline-block bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 uppercase">
                     Beginner
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     ASL Basics
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                     Master the alphabet, numbers, and common phrases to start
                     your signing journey.
                   </p>
@@ -262,7 +247,7 @@ export default function Home() {
                     <span className="text-2xl font-bold text-gray-900">Free</span>
                     <Link
                       href="/courses"
-                      className="border-2 border-teal-700 text-teal-700 px-6 py-2 rounded-full hover:bg-teal-50 transition text-sm font-semibold"
+                      className="border-2 border-teal-700 text-teal-700 px-6 py-2 rounded-full hover:bg-teal-50 transition-all duration-300 text-sm font-semibold hover:shadow-md"
                     >
                       Start Now
                     </Link>
@@ -271,18 +256,22 @@ export default function Home() {
               </div>
 
               {/* Conversational ASL */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition">
-                <div className="aspect-video bg-gradient-to-br from-cyan-200 to-blue-200 flex items-center justify-center">
-                  <span className="text-6xl">💬</span>
+              <div className="bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 shadow-md hover:-translate-y-1">
+                <div className="aspect-video bg-gray-100 overflow-hidden">
+                  <img
+                    src="/p3.jpg"
+                    alt="Conversational ASL"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6">
-                  <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                  <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 uppercase">
                     Intermediate
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     Conversational ASL
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                     Build fluency with everyday conversations and practical
                     signing scenarios.
                   </p>
@@ -290,7 +279,7 @@ export default function Home() {
                     <span className="text-2xl font-bold text-gray-900">$79</span>
                     <Link
                       href="/courses"
-                      className="border-2 border-teal-700 text-teal-700 px-6 py-2 rounded-full hover:bg-teal-50 transition text-sm font-semibold"
+                      className="border-2 border-teal-700 text-teal-700 px-6 py-2 rounded-full hover:bg-teal-50 transition-all duration-300 text-sm font-semibold hover:shadow-md"
                     >
                       Enroll
                     </Link>
@@ -299,18 +288,22 @@ export default function Home() {
               </div>
 
               {/* ASL Mastery */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition">
-                <div className="aspect-video bg-teal-700 flex items-center justify-center">
-                  <span className="text-6xl">🎓</span>
+              <div className="bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 shadow-md hover:-translate-y-1">
+                <div className="aspect-video bg-gray-100 overflow-hidden">
+                  <img
+                    src="/w.png"
+                    alt="ASL Mastery"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6">
-                  <span className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                  <span className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 uppercase">
                     Advanced
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     ASL Mastery
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                     Perfect your skills with advanced grammar, idioms, and
                     cultural nuances.
                   </p>
@@ -318,7 +311,7 @@ export default function Home() {
                     <span className="text-2xl font-bold text-gray-900">$149</span>
                     <Link
                       href="/courses"
-                      className="border-2 border-teal-700 text-teal-700 px-6 py-2 rounded-full hover:bg-teal-50 transition text-sm font-semibold"
+                      className="border-2 border-teal-700 text-teal-700 px-6 py-2 rounded-full hover:bg-teal-50 transition-all duration-300 text-sm font-semibold hover:shadow-md"
                     >
                       Enroll
                     </Link>
@@ -332,8 +325,8 @@ export default function Home() {
         {/* The Future of ASL Learning */}
         <section className="py-20 bg-gray-50 relative overflow-hidden">
           {/* Decorative Elements */}
-          <WavePattern className="top-10 right-20 text-teal-200 opacity-30" />
-          <CirclePattern className="bottom-10 left-20 text-cyan-200 opacity-20" />
+          <DotPattern className="top-10 right-20 text-teal-400 opacity-30" />
+          <DotPattern className="bottom-10 left-20 text-cyan-400 opacity-30" />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
@@ -342,89 +335,43 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Live Interaction Card */}
-              <div className="bg-teal-700 rounded-3xl p-10 text-white">
-                <h3 className="text-2xl font-bold mb-4">Live Interaction</h3>
-                <p className="text-cyan-100 mb-6">
-                  Practice with live instructors and get instant feedback on your
-                  signing. Join real-time sessions with certified ASL teachers and
-                  connect with fellow learners.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <svg
-                      className="w-5 h-5 text-cyan-200 mt-0.5 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-cyan-100">Real-time feedback</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg
-                      className="w-5 h-5 text-cyan-200 mt-0.5 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-cyan-100">Interactive practice sessions</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg
-                      className="w-5 h-5 text-cyan-200 mt-0.5 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-cyan-100">Community support</span>
-                  </li>
-                </ul>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Live Interaction Card - Large */}
+              <div className="bg-teal-800 rounded-3xl p-10 text-white relative overflow-hidden min-h-[450px] flex flex-col justify-between">
+                <div className="relative z-10">
+                  <div className="inline-flex items-center gap-2 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-6">
+                    <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    Live Now
+                  </div>
+                  <h3 className="text-3xl font-bold mb-6">Live Interaction</h3>
+                  <p className="text-teal-100 leading-relaxed text-lg">
+                    Practice real-time with native signers in our high-definition virtual classrooms. Get instant feedback on your hand placement and facial expressions.
+                  </p>
+                </div>
+                {/* Large background icon/illustration */}
+                <div className="absolute bottom-4 right-4 opacity-10">
+                  <svg
+                    className="w-64 h-64 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={0.5}
+                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
               </div>
 
-              {/* AI Tracking Card */}
-              <div className="bg-white rounded-3xl p-10 border border-gray-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">🤖</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">AI Tracking</h3>
-                </div>
-                <p className="text-gray-600 mb-6">
-                  Harness AI to track your signing accuracy and get personalized
-                  recommendations for improvement.
-                </p>
-              </div>
-            </div>
-
-            {/* Real-time Captions */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center">
+              {/* Progress Tracking Card */}
+              <div className="bg-gray-200 rounded-3xl p-10 relative overflow-hidden min-h-[450px] flex flex-col justify-between">
+                <div>
+                  <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                     <svg
-                      className="w-8 h-8 text-teal-700"
+                      className="w-7 h-7 text-teal-700"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -433,30 +380,20 @@ export default function Home() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
                       />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">
-                      Real-time Captions
-                    </h3>
-                    <p className="text-gray-600">
-                      AI-powered captioning helps you learn at your own pace with
-                      instant translations.
-                    </p>
-                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Progress Tracking
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-lg mb-8">
+                    Visualize your learning journey with daily streaks and skill-level analytics.
+                  </p>
                 </div>
-                <div className="flex gap-2">
-                  <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
-                    English
-                  </button>
-                  <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
-                    Spanish
-                  </button>
-                  <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
-                    French
-                  </button>
+                {/* Progress bar at bottom */}
+                <div className="w-full h-2 bg-white rounded-full overflow-hidden shadow-inner">
+                  <div className="w-3/4 h-full bg-teal-700 rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -464,10 +401,10 @@ export default function Home() {
         </section>
 
         {/* Community Stories */}
-        <section className="py-20 bg-white relative overflow-hidden">
+        <section className="py-20 bg-gray-50 relative overflow-hidden">
           {/* Decorative Elements */}
-          <DotPattern className="top-10 right-10 text-teal-300 opacity-20" />
-          <WavePattern className="bottom-10 left-10 text-cyan-200 opacity-25" />
+          <DotPattern className="top-10 right-10 text-teal-400 opacity-30" />
+          <DotPattern className="bottom-10 left-10 text-cyan-400 opacity-30" />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 className="text-4xl font-bold text-gray-900 mb-12">
@@ -475,26 +412,33 @@ export default function Home() {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               {/* Story 1 */}
-              <div className="flex gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl flex items-center justify-center">
-                    <span className="text-4xl">👩</span>
+              <div className="flex gap-6 group cursor-pointer">
+                <div className="shrink-0">
+                  <div className="w-24 h-24 bg-gradient-to-br from-teal-400 to-teal-600 rounded-3xl overflow-hidden transform group-hover:scale-105 transition-transform duration-300 shadow-lg">
+                    <img
+                      src="/p1.jpg"
+                      alt="Sarah"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2 text-lg">
-                    "How SignLearn helped me get on the path to ASL fluency"
+                  <span className="inline-block bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 uppercase tracking-wide">
+                    Success Story
+                  </span>
+                  <h3 className="font-bold text-gray-900 mb-2 text-xl group-hover:text-teal-700 transition-colors">
+                    How Sarah bridged the gap at her tech firm
                   </h3>
-                  <p className="text-gray-600 mb-3">
-                    I was always shy about the gap in my ASL skills. SignLearn gave
-                    me the confidence and tools to communicate fluently with my Deaf
-                    family members. The interactive lessons made all the difference.
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    "SignLearn gave me the tools to finally communicate directly
+                    with my Deaf colleagues. The confidence I gained transformed my
+                    career."
                   </p>
                   <Link
                     href="/blog"
-                    className="text-teal-700 font-semibold text-sm hover:text-teal-800 inline-flex items-center gap-1"
+                    className="text-teal-700 font-semibold text-sm hover:text-teal-800 inline-flex items-center gap-1 group-hover:gap-2 transition-all"
                   >
-                    Read full story
+                    Read Story
                     <svg
                       className="w-4 h-4"
                       fill="none"
@@ -513,26 +457,32 @@ export default function Home() {
               </div>
 
               {/* Story 2 */}
-              <div className="flex gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center">
-                    <span className="text-4xl">🏢</span>
+              <div className="flex gap-6 group cursor-pointer">
+                <div className="shrink-0">
+                  <div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-3xl overflow-hidden transform group-hover:scale-105 transition-transform duration-300 shadow-lg">
+                    <img
+                      src="/p2.jpg"
+                      alt="Learning tips"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2 text-lg">
-                    "5 Tips for Interpreting ASL in Professional Settings"
+                  <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 uppercase tracking-wide">
+                    Learning Tips
+                  </span>
+                  <h3 className="font-bold text-gray-900 mb-2 text-xl group-hover:text-teal-700 transition-colors">
+                    5 Tips for remembering fluid signs
                   </h3>
-                  <p className="text-gray-600 mb-3">
-                    As a professional interpreter, I've learned valuable lessons
-                    about bridging communication gaps in corporate environments.
-                    Here are my top tips for success.
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Muscle memory is key. Discover the best drills to make your
+                    signs feel natural and effortless.
                   </p>
                   <Link
                     href="/blog"
-                    className="text-teal-700 font-semibold text-sm hover:text-teal-800 inline-flex items-center gap-1"
+                    className="text-teal-700 font-semibold text-sm hover:text-teal-800 inline-flex items-center gap-1 group-hover:gap-2 transition-all"
                   >
-                    Read full story
+                    Read Article
                     <svg
                       className="w-4 h-4"
                       fill="none"
@@ -554,29 +504,31 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-teal-700">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Support Our Mission
-            </h2>
-            <p className="text-xl text-cyan-100 mb-8">
-              Your donation helps us provide free ASL education to thousands of
-              learners worldwide. Join us in breaking barriers and building
-              bridges.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/donate"
-                className="bg-white text-teal-700 px-8 py-3 rounded-full hover:bg-gray-100 transition font-semibold"
-              >
-                Donate Now
-              </Link>
-              <Link
-                href="/courses"
-                className="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white/10 transition font-semibold"
-              >
-                Explore All Courses
-              </Link>
+        <section className="py-20 bg-teal-800 relative overflow-hidden">
+          <DotPattern className="top-10 right-10 text-teal-600 opacity-20" />
+          <DotPattern className="bottom-10 left-10 text-teal-600 opacity-20" />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Support Our Mission
+              </h2>
+              <p className="text-lg text-teal-100 mb-8 leading-relaxed">
+                Help us keep our fundamental courses free for everyone. Your donation supports
+                content creation, accessibility research, and scholarship programs for low-income
+                learners.
+              </p>
+              <div className="flex flex-wrap items-center gap-6">
+                <Link
+                  href="/donate"
+                  className="bg-white text-teal-800 px-10 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  Donate Now
+                </Link>
+                <div className="text-teal-200 text-sm">
+                  Total Raised This Month: <span className="font-bold text-white text-base">$42,500</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

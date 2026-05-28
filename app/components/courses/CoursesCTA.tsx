@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { DotPattern } from "../DecorativeElements";
 
 export default function CoursesCTA() {
   return (
-    <section className="py-20 bg-teal-700">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-20 bg-teal-700 relative overflow-hidden">
+      <DotPattern className="top-10 left-10 text-white opacity-20" />
+      <DotPattern className="bottom-10 right-10 text-cyan-200 opacity-20" />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-4xl font-bold text-white mb-6">
           Ready to start signing?
         </h2>

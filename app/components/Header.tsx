@@ -20,7 +20,6 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/courses", label: "Courses" },
-    { href: "/asl", label: "ASL" },
     { href: "/blog", label: "Blog" },
     { href: "/donate", label: "Donate" },
   ];
@@ -36,13 +35,18 @@ export default function Header() {
             : "bg-white/90 backdrop-blur-md shadow-lg"
         } rounded-full border border-gray-200/50`}
       >
-        <div className="flex justify-between items-center px-8 py-5">
+        <div className="flex justify-between items-center px-8 py-4 min-h-[64px]">
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl font-bold text-gray-900 hover:text-teal-700 transition-colors duration-200"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-200 flex-shrink-0"
           >
-            SignLearn
+            <img 
+              src="/logo.png" 
+              alt="SignLearn" 
+              className="h-14 w-auto max-w-[280px] object-contain"
+            />
+            <span className="text-2xl font-bold text-teal-700">SignLearn</span>
           </Link>
 
           {/* Desktop Navigation */}

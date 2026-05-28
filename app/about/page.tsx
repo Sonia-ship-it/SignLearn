@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import AboutHero from "../components/about/AboutHero";
 import OurJourney from "../components/about/OurJourney";
 import OurValues from "../components/about/OurValues";
-import TeamSection from "../components/about/TeamSection";
 import AboutCTA from "../components/about/AboutCTA";
 
 export default function About() {
@@ -14,7 +13,6 @@ export default function About() {
         <AboutHero />
         <OurJourney />
         <OurValues />
-        <TeamSection />
         <AboutCTA />
       </main>
       <Footer />

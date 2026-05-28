@@ -1,3 +1,5 @@
+import { DotPattern } from "../DecorativeElements";
+
 export default function JourneyToFluency() {
   const steps = [
     {
@@ -85,8 +87,10 @@ export default function JourneyToFluency() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gray-50 relative overflow-hidden">
+      <DotPattern className="top-10 left-10 text-teal-400 opacity-30" />
+      <DotPattern className="bottom-10 right-10 text-cyan-400 opacity-25" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Your Journey to Fluency
@@ -97,18 +101,25 @@ export default function JourneyToFluency() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <div key={index} className="text-center">
-              <div
-                className={`w-20 h-20 ${step.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
-              >
-                {step.icon}
+        <div className="relative">
+          {/* Dotted connecting line through circles */}
+          <div className="hidden md:block absolute top-10 left-0 right-0 h-1" style={{ width: 'calc(100% - 10rem)', marginLeft: '5rem' }}>
+            <div className="w-full h-full border-t-4 border-dashed border-gray-300"></div>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8 relative">
+            {steps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div
+                  className={`w-20 h-20 ${step.bgColor} rounded-full flex items-center justify-center mx-auto mb-4 relative z-10 border-4 border-white shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl`}
+                >
+                  {step.icon}
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-sm text-gray-600">{step.description}</p>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
-              <p className="text-sm text-gray-600">{step.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

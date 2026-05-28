@@ -123,13 +123,12 @@ export default function Blog() {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-teal-700 rounded-3xl overflow-hidden shadow-2xl">
-                  <div className="aspect-[4/5] bg-teal-600 flex items-center justify-center p-8">
-                    <div className="text-white text-center">
-                      <div className="text-8xl mb-4">✍️</div>
-                      <p className="text-lg">Sharing Our Stories</p>
-                    </div>
-                  </div>
+                <div className="bg-teal-700 rounded-3xl overflow-hidden shadow-2xl max-h-[400px]">
+                  <img
+                    src="/blog.png"
+                    alt="Blog stories"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -213,8 +212,12 @@ export default function Blog() {
               <div className="space-y-6">
                 {/* Career Hub Card */}
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-                  <div className="aspect-video bg-teal-700 flex items-center justify-center">
-                    <span className="text-6xl">🤝</span>
+                  <div className="aspect-video bg-gray-100 overflow-hidden">
+                    <img
+                      src="/sign.jpg"
+                      alt="Career story"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="p-6">
                     <span className="inline-block bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
@@ -392,9 +395,9 @@ export default function Blog() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-6 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-white"
+                  className="flex-1 px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white placeholder-white/60"
                 />
-                <button className="bg-white text-teal-700 px-8 py-3 rounded-full hover:bg-gray-100 transition font-semibold">
+                <button className="bg-white text-teal-700 px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:scale-105">
                   Subscribe
                 </button>
               </div>

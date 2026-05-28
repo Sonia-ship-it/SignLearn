@@ -1,7 +1,11 @@
+import { DotPattern } from "../DecorativeElements";
+
 export default function WhereMoneyGoes() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-white relative overflow-hidden">
+      <DotPattern className="top-10 right-10 text-teal-400 opacity-30" />
+      <DotPattern className="bottom-10 left-10 text-cyan-400 opacity-25" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
           Where Your Money Goes
         </h2>
@@ -90,15 +94,19 @@ export default function WhereMoneyGoes() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-teal-700 rounded-2xl p-6 text-white">
-              <div className="aspect-square bg-teal-600 rounded-xl mb-4 flex items-center justify-center">
-                <span className="text-4xl">💻</span>
-              </div>
+            <div className="bg-teal-700 rounded-2xl overflow-hidden mt-12">
+              <img
+                src="/d1.png"
+                alt="Educational resources"
+                className="w-full h-full object-cover aspect-square"
+              />
             </div>
-            <div className="bg-gray-100 rounded-2xl p-6">
-              <div className="aspect-square bg-white rounded-xl flex items-center justify-center">
-                <span className="text-4xl">👥</span>
-              </div>
+            <div className="bg-gray-100 rounded-2xl overflow-hidden mb-12">
+              <img
+                src="/d2.png"
+                alt="Community support"
+                className="w-full h-full object-cover aspect-square"
+              />
             </div>
           </div>
         </div>

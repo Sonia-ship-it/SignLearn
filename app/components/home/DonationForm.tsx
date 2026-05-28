@@ -1,12 +1,15 @@
 "use client";
 import { useState } from "react";
+import { DotPattern } from "../DecorativeElements";
 
 export default function DonationForm() {
   const [selectedAmount, setSelectedAmount] = useState(100);
 
   return (
-    <section id="donate" className="py-20 bg-gray-50">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="donate" className="py-20 bg-gray-50 relative overflow-hidden">
+      <DotPattern className="top-20 left-10 text-teal-400 opacity-30" />
+      <DotPattern className="bottom-20 right-10 text-cyan-400 opacity-25" />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="bg-white rounded-3xl shadow-xl p-8">
           <div className="text-center mb-8">
             <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">

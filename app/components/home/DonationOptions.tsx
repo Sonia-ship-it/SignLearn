@@ -1,7 +1,11 @@
+import { DotPattern } from "../DecorativeElements";
+
 export default function DonationOptions() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gray-50 relative overflow-hidden">
+      <DotPattern className="top-20 left-20 text-teal-400 opacity-30" />
+      <DotPattern className="bottom-20 right-20 text-cyan-400 opacity-25" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Choose Your Impact
